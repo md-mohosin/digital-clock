@@ -7,6 +7,16 @@ function updateClock() {
     document.getElementById("year").textContent = date.getFullYear()
     document.getElementById("weekday").textContent = date.toLocaleDateString("en-GB", { weekday: "long" })
     document.getElementById("minute").textContent = date.getMinutes()
+    document.getElementById("seconde").textContent = date.getSeconds()
+
+    let hours = date.getHours()
+    let ampm = hours >= 12 ? 'PM' : "AM"
+    hours = hours % 12;
+    hours = hours === 0 ? 12 : hours
+
+    
+    document.getElementById("hour").textContent= hours
+    document.getElementById("ampm").textContent=ampm
 }
 
 setInterval(updateClock, 1000)
