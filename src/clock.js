@@ -7,7 +7,7 @@ function updateClock() {
     document.getElementById("year").textContent = date.getFullYear()
     document.getElementById("weekday").textContent = date.toLocaleDateString("en-GB", { weekday: "long" })
     document.getElementById("minute").textContent = date.getMinutes()
-    document.getElementById("seconde").textContent = date.getSeconds()
+    document.getElementById("second").textContent = date.getSeconds()
 
     let hours = date.getHours()
     let ampm = hours >= 12 ? 'PM' : "AM"
